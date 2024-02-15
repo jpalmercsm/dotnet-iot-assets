@@ -38,16 +38,16 @@ while (true)
     var magValue = sh.MagneticInduction;
     var altValue = WeatherHelper.CalculateAltitude(preValue, defaultSeaLevelPressure, tempValue);
 
-    Console.WriteLine($"Temperature Sensor 1: {tempValue.DegreesCelsius:0.#}\u00B0C");
-    Console.WriteLine($"Temperature Sensor 2: {temp2Value.DegreesCelsius:0.#}\u00B0C");
+    Console.WriteLine($"Temperature Sensor 1: {tempValue.DegreesFahrenheit:0.#}\u00B0F");
+    Console.WriteLine($"Temperature Sensor 2: {temp2Value.DegreesFahrenheit:0.#}\u00B0F");
     Console.WriteLine($"Pressure: {preValue.Hectopascals:0.##} hPa");
     Console.WriteLine($"Altitude: {altValue.Meters:0.##} m");
     Console.WriteLine($"Acceleration: {sh.Acceleration} g");
     Console.WriteLine($"Angular rate: {sh.AngularRate} DPS");
     Console.WriteLine($"Magnetic induction: {sh.MagneticInduction} gauss");
     Console.WriteLine($"Relative humidity: {humValue.Percent:0.#}%");
-    Console.WriteLine($"Heat index: {WeatherHelper.CalculateHeatIndex(tempValue, humValue).DegreesCelsius:0.#}\u00B0C");
-    Console.WriteLine($"Dew point: {WeatherHelper.CalculateDewPoint(tempValue, humValue).DegreesCelsius:0.#}\u00B0C");
+    Console.WriteLine($"Heat index: {WeatherHelper.CalculateHeatIndex(tempValue, humValue).DegreesFahrenheit:0.#}\u00B0F");
+    Console.WriteLine($"Dew point: {WeatherHelper.CalculateDewPoint(tempValue, humValue).DegreesFahrenheit:0.#}\u00B0F");
 
     Thread.Sleep(1000);
 }
